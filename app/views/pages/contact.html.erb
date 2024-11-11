@@ -1,0 +1,15 @@
+<h1>Contact us</h1>
+
+<form action="<%= contact_path %>" method="get">
+  <input type="text"
+         name="search"
+         placeholder="Who are you looking for?"
+         value="<%= params[:search] %>">
+  <input type="submit">
+</form>
+
+<ul>
+  <% @members.each do |member| %>
+    <li><%= member.capitalize %></li>
+  <% end %>
+</ul>
